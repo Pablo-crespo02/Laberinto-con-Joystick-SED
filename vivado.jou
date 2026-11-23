@@ -1,0 +1,45 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Mon Nov 23 12:08:02 2026
+# Process ID: 22484
+# Current directory: C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent19176 C:\Users\gonch\OneDrive\Documentos\GitHub\Laberinto-con-Joystick-SED\TrabajoSED.xpr
+# Log file: C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/vivado.log
+# Journal file: C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED\vivado.jou
+# Running On        :LAPTOP-D1RR246S
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :26300
+# Processor Detail  :Intel(R) Core(TM) i7-10510U CPU @ 1.80GHz
+# CPU Frequency     :2304 MHz
+# CPU Physical cores:4
+# CPU Logical cores :8
+# Host memory       :16968 MB
+# Swap memory       :9126 MB
+# Total Virtual     :26095 MB
+# Available Virtual :6785 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/TrabajoSED.xpr
+update_compile_order -fileset sources_1
+close [ open C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/TrabajoSED.srcs/sources_1/new/servo_pwm.vhd w ]
+add_files C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/TrabajoSED.srcs/sources_1/new/servo_pwm.vhd
+update_compile_order -fileset sources_1
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/TrabajoSED.srcs/sim_1/new/servo_pwm_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/TrabajoSED.srcs/sim_1/new/servo_pwm_tb.vhd
+update_compile_order -fileset sim_1
+launch_simulation
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top servo_pwm_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+source servo_pwm_tb.tcl
+save_wave_config {C:/Users/gonch/OneDrive/Documentos/GitHub/Laberinto-con-Joystick-SED/TrabajoSED.sim/servo_pwm_tb_behav.wcfg}
+close_sim
